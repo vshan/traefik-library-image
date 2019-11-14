@@ -13,6 +13,7 @@ RUN set -ex; \
 	rm -f /tmp/traefik.tar.gz; \
 	chmod +x /usr/local/bin/traefik
 COPY entrypoint.sh /
+COPY initfilelock /
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["traefik"]
